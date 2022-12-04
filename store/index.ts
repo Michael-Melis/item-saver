@@ -1,10 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import iconSlice from './iconSlice';
 
 const store = configureStore({
-  reducer: {
-    icon: iconSlice.reducer,
-  },
+  reducer: {},
 });
 
 export default store;
