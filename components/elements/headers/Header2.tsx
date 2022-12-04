@@ -2,9 +2,9 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { IHeader } from '../../../@types/elements/header';
 
-const H1 = ({ content }: IHeader) => {
+const H2 = ({ content }: IHeader) => {
   const { t } = useTranslation();
-  return <h1>{t(content.toString())}</h1>;
+  return <h2>{t(content.toString())}</h2>;
 };
 
-export default H1;
+export default H2;
