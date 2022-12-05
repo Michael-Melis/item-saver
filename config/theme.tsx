@@ -1,20 +1,23 @@
-import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+// import { PaletteMode } from '@mui/material';
 
-const theme = createTheme({
+const getDesignTokens = (mode: any) => ({
   palette: {
+    mode,
     primary: {
-      main: '#1fb6ff',
+      main: '#280046',
     },
     secondary: {
-      main: '#19857b',
+      main: '#B4FAB4',
     },
     success: {
-      main: '#13ce66',
+      main: '#28C76F',
     },
     error: {
-      main: red.A400,
+      main: '#FA3E3E',
+    },
+    warning: {
+      main: '#EF7D00',
     },
   },
 });
-export default theme;
+export default getDesignTokens;

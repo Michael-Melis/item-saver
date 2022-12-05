@@ -3,7 +3,7 @@ import LanguageSelector from './LanguageSelector';
 import ThemeToggler from './ThemeToggler';
 
 const Navbar = () => (
-  <div>
+  <div className='flex justify-end'>
     <ThemeToggler />
     <LanguageSelector />
   </div>
