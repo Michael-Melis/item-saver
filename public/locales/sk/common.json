@@ -1,4 +1,8 @@
 {
+  "language": {
+    "slovak": "Slovenčina",
+    "english": "Angličtina"
+  },
   "footer": {
     "title": "Túto webovú aplikáciu vytvoril Michael Meliš © 2023"
   }

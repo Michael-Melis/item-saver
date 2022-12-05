@@ -2,9 +2,9 @@
 export const getFullLocaleName = (code: string) => {
   switch (code) {
     case 'en':
-      return 'English';
+      return 'language.english';
     case 'sk':
-      return 'Slovak';
+      return 'language.slovak';
 
     default:
       return '';

@@ -14,8 +14,9 @@ const ThemeToggler = () => {
   return (
     <Button
       variant='text'
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-      {theme === 'light' ? (
+      onClick={() => setTheme(theme === 'system' || theme === 'light' ? 'dark' : 'light')
+      }>
+      {theme && theme === 'light' ? (
         <DarkModeIcon className='text-gray-dark' />
       ) : (
         <LightModeIcon className='text-yellow ' />

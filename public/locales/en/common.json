@@ -1,4 +1,8 @@
 {
+  "language": {
+    "slovak": "Slovak",
+    "english": "English"
+  },
   "footer": {
     "title": "This webApp was created by Michael Melis © 2023"
   }
