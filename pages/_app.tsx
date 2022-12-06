@@ -20,9 +20,9 @@ const App = (props: MyAppProps) => {
   const { theme: skin } = useTheme();
   const [mode, setMode] = useState<any>('dark');
 
-  // useEffect(() => {
-  //   setMode(skin);
-  // }, []);
+  useEffect(() => {
+    setMode(skin);
+  }, []);
 
   // const colorMode = useMemo(
   //   () => ({
@@ -36,10 +36,9 @@ const App = (props: MyAppProps) => {
 
   // Update the theme only if the mode changes
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
-  console.log(skin);
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
-    <NextThemeProvider enableSystem={true} attribute='class'>
+    <NextThemeProvider enableSystem={false} attribute='class'>
       <Provider store={store}>
         <CacheProvider value={emotionCache}>
           <Head>
@@ -49,7 +48,6 @@ const App = (props: MyAppProps) => {
             />
           </Head>
           <ThemeProvider theme={theme}>
-            <button>{mode}</button>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             <Component {...pageProps} />
