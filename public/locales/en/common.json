@@ -3,6 +3,14 @@
     "slovak": "Slovak",
     "english": "English"
   },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Log out",
+  },
+  "theme": {
+    "dark": "Dark theme",
+    "light": "Light theme"
+  },
   "footer": {
     "title": "This webApp was created by Michael Melis © 2023"
   }

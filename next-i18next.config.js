@@ -4,7 +4,7 @@ module.exports = {
     localeDetection: false,
     locales: ['en', 'sk'],
   },
-  fallbackLng: {
-    default: ['en'],
-  },
+  // fallbackLng: {
+  //   default: ['en'],
+  // },
 };

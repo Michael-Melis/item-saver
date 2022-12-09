@@ -10,10 +10,16 @@ const LanguageSelector = () => {
 
   return (
     <FormControl>
-      <Select className='dark:text-gray-light' defaultValue={'en'} size='small'>
+      <Select
+        className='dark:text-gray-light'
+        value={router.locale}
+        size='small'>
         {router?.locales?.map((language, i) => (
           <MenuItem key={i} value={language}>
-            <Link href='/' locale={language} className='flex items-center'>
+            <Link
+              href={router.pathname}
+              locale={language}
+              className='flex items-center'>
               <ReactCountryFlag
                 countryCode={language === 'en' ? 'gb' : language}
                 svg
