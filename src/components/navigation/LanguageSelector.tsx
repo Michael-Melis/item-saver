@@ -7,7 +7,6 @@ import H6 from '../elements/headers/Header6';
 
 const LanguageSelector = () => {
   const router = useRouter();
-
   return (
     <FormControl>
       <Select

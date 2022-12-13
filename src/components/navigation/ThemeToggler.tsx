@@ -3,25 +3,31 @@ import { useState, useEffect } from 'react';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { Button } from '@mui/material';
-import { useAppDispatch } from '../../hooks/useReduxToolkit';
-import { changeToDarkTheme, changeToLightTheme } from '../../store/themeSlice';
+
 import H6 from '../elements/headers/Header6';
+import { useAppDispatch, useAppSelector } from '../../hooks/useReduxToolkit';
+import { changeToDarkTheme, changeToLightTheme } from '../../store/themeSlice';
 
 const ThemeToggler = () => {
   const dispatch = useAppDispatch();
+  const muiTheme = useAppSelector((state) => state.theme.skin);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   const handleToggleTheme = () => {
-    setTheme(theme === 'system' || theme === 'light' ? 'dark' : 'light');
-    dispatch(theme === 'light' ? changeToDarkTheme() : changeToLightTheme());
+    setTheme(theme === 'light' ? 'dark' : 'light');
+    if (theme === 'light') {
+      dispatch(changeToDarkTheme());
+    } else {
+      dispatch(changeToLightTheme());
+    }
   };
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
   return (
     <Button variant='text' onClick={handleToggleTheme}>
-      {theme && theme === 'light' ? (
+      {muiTheme && muiTheme === 'light' ? (
         <>
           <DarkModeIcon className='text-gray-dark' />
           <H6 content='theme.dark' styles='ml-1' />

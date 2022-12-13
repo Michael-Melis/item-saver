@@ -14,6 +14,7 @@ const clientSideEmotionCache = createEmotionCache();
 
 const App = (props: MyAppProps) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   return (
     <NextThemeProvider enableSystem={false} attribute='class'>
       <Provider store={store}>

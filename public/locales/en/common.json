@@ -3,13 +3,18 @@
     "slovak": "Slovak",
     "english": "English"
   },
+  "main": {
+    "title": "This is the main titleeee and is working",
+    "backButton": "Go Back",
+    "signeOut": "YOu have been signet out"
+  },
   "auth": {
     "login": "Sign in",
-    "logout": "Log out",
+    "logout": "Log out"
   },
   "theme": {
-    "dark": "Dark theme",
-    "light": "Light theme"
+    "dark": "Dark",
+    "light": "Light"
   },
   "footer": {
     "title": "This webApp was created by Michael Melis © 2023"
