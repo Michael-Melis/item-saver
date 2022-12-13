@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { Button } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '../../hooks/useReduxToolkit';
 import { changeToDarkTheme, changeToLightTheme } from '../../store/themeSlice';
 import H6 from '../elements/headers/Header6';
@@ -17,7 +16,6 @@ const ThemeToggler = () => {
     setTheme(theme === 'system' || theme === 'light' ? 'dark' : 'light');
     dispatch(theme === 'light' ? changeToDarkTheme() : changeToLightTheme());
   };
-  const { t } = useTranslation();
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
